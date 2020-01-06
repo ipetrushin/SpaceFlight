@@ -8,10 +8,7 @@ public class Star {
 
     public Star() {
         // создаёт объекс со случайными параметрами
-        velocity = 0.01f;
-        radius = (float) (Math.random()*0.5);
-        angle = (float) (Math.random()*Math.PI*2);
-        color = Color.WHITE;
+        reset();
     }
     public void move() {
         // передвигает "звезду" на один шаг
@@ -23,5 +20,12 @@ public class Star {
     }
     public float getY() {
         return (float) (Math.sin(angle)*radius);
+    }
+    public void reset() {
+        velocity = (float) (0.01 + Math.random()*0.01);
+        radius = (float) (Math.random()*0.5);
+        angle = (float) (Math.random()*Math.PI*2);
+        int rg = (int) (Math.random()*55 + 200);
+        color = Color.rgb(rg,rg, 255);
     }
 }

@@ -29,6 +29,6 @@ public class StarField extends View {
     public boolean onTouchEvent(MotionEvent event) {
         stars.moveStars();
         invalidate();
-        return false;
+        return true;
     }
 }

@@ -26,6 +26,9 @@ public class Stars {
     public void moveStars() {
         for (Star s: stars) {
             s.move();
+            if (Math.abs(s.getX()) > 1 || Math.abs(s.getY()) > 1) {
+                s.reset();
+            }
         }
         // 1 передвигает каждую "звезду"
         // 2 если звезда вышла за границы экрана
