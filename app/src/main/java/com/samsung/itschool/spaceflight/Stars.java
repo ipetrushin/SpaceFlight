@@ -13,11 +13,13 @@ public class Stars {
     }
 
     Paint p = new Paint();
-    ArrayList<Star> stars;
+    ArrayList<Star> stars = new ArrayList<>();
     public void draw(Canvas c) {
+        float w = c.getWidth();
+        float h = c.getHeight();
         for (Star s: stars) {
             p.setColor(s.color);
-            c.drawCircle(s.getX(), s.getY(), 10, p);
+            c.drawCircle(s.getX()*w + w/2  , s.getY()*h + h/2 , 10, p);
         }
 
     }
