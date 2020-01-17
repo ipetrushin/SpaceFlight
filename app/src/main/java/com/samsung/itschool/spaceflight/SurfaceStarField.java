@@ -20,7 +20,6 @@ public class SurfaceStarField extends SurfaceView implements SurfaceHolder.Callb
 
             while (isRunning) {
                 try { sleep(50); } catch (InterruptedException e) {}
-
                 Canvas c = holder.lockCanvas();
                 // проверить, существует ли канва
                 if (c != null) {
